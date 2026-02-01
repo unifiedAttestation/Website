@@ -251,27 +251,31 @@ POST /api/v1/app/decodeToken
       <section class="section" id="run">
         <div class="section-head">
           <h2>Run locally</h2>
-          <p>Quick commands to bootstrap the stack.</p>
+          <p>Quick commands to bootstrap the stack. Use the docker-compose file inside the Backend repo.</p>
         </div>
         <div class="run-grid">
           <div class="run-block reveal">
-            <h4>Backend</h4>
+            <h4>Docker (prebuilt)</h4>
             <pre>
+git clone https://github.com/unifiedAttestation/Backend.git
 cd Backend
-npm install
-npm run dev:backend
+docker-compose up
             </pre>
           </div>
           <div class="run-block reveal">
-            <h4>Portal</h4>
+            <h4>Backend and Portal</h4>
             <pre>
+git clone https://github.com/unifiedAttestation/Backend.git
 cd Backend
+npm install
+npm run dev:backend
 npm run dev:portal
             </pre>
           </div>
           <div class="run-block reveal">
             <h4>Example App Server</h4>
             <pre>
+git clone https://github.com/unifiedAttestation/Example-App-Server.git
 cd Example-App-Server
 npm install
 npm run dev
